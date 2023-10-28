@@ -12,12 +12,10 @@ searhProfile.addEventListener("keyup", (event) =>{
                 if(res.profile.length !== 0){
                     ui.showProfile(res.profile[0])
                     ui.showTodo(res.todo)
-                    ui.alert.classList.add("dissplayNone")
-                    ui.profileContainer.classList.remove("dissplayNone")
+                    ui.showPrContNoneAl()
                 }else{
                     ui.showAlert(text)
-                    ui.alert.classList.remove("dissplayNone")
-                    ui.profileContainer.classList.add("dissplayNone")
+                    ui.showAlNonePrCont()
                 }
             })
             .catch(err =>{
@@ -32,12 +30,10 @@ searhProfile.addEventListener("keyup", (event) =>{
                 if(res.profile.length !== 0){
                     ui.showProfile(res.profile[0])
                     ui.showTodo(res.todo)
-                    ui.alert.classList.add("dissplayNone")
-                    ui.profileContainer.classList.remove("dissplayNone")
+                    ui.showPrContNoneAl()
                 }else{
                     ui.showAlert(text)
-                    ui.alert.classList.remove("dissplayNone")
-                    ui.profileContainer.classList.add("dissplayNone")
+                    ui.showAlNonePrCont()
                 }
             })
             .catch(err =>{
@@ -51,8 +47,7 @@ searhProfile.addEventListener("keyup", (event) =>{
             ui.profileContainer.classList.add("dissplayNone")
             
         }else{
-            ui.alert.classList.remove("dissplayNone")
-            ui.profileContainer.classList.add("dissplayNone")
+            ui.showAlNonePrCont()
             ui.showAlert(text)
         }
         

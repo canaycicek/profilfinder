@@ -15,7 +15,7 @@ class UI{
                     </div>
                     <div class="col-md-9">
                         <h4>Contact</h4>
-                        <ul class="list-group">
+                        <ul class="list-group mb-4">
                             <li class="list-group-item">
                                 name: ${profile.name}
                             </li>
@@ -76,5 +76,13 @@ class UI{
     showAlert(text){
         this.alert.innerHTML = `${text} is not found`
         this.alert.classList.remove("dissplayNone")
+    }
+    showAlNonePrCont(){
+        this.alert.classList.remove("dissplayNone")
+        this.profileContainer.classList.add("dissplayNone")
+    }
+    showPrContNoneAl(){
+        this.alert.classList.add("dissplayNone")
+        this.profileContainer.classList.remove("dissplayNone")
     }
 }
